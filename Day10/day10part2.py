@@ -14,7 +14,7 @@ for char in input:
 
 inputLengths.append(17)
 inputLengths.append(31)
-inputLengths.append(71)
+inputLengths.append(73)
 inputLengths.append(47)
 inputLengths.append(23)
 
@@ -53,7 +53,7 @@ for i in range(64):
 
 denseHash = []
 for i in range(int(256/16)):
-    currentList = circularList[i*16:i*16+15]
+    currentList = circularList[i*16:(i+1)*16]
     result = currentList[0]
     for j in range(1, len(currentList)):
         result ^= currentList[j]
